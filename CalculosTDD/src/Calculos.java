@@ -32,7 +32,17 @@ public class Calculos {
      * @return cantidad de vocales
      */
     int vocales(String texto) {
-        throw new UnsupportedOperationException("En construcción.");
+        int contador = 0;
+        
+        for (int i = 0; i < texto.length(); i++) {
+            char letra = Character.toLowerCase(texto.charAt(i));
+            
+            if (letra == 'a' || letra == 'e' || letra == 'i'
+                    || letra == '0' || letra == 'u'){
+                contador++;
+            }
+        }
+        return contador;
     }
 
     /**
